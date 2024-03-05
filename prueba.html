@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        #div1 {
+            height: 100vh;
+            width: 100%;
+            background-image: url('https://www.allinallnews.com/wp-content/uploads/2015/05/Google-Maps.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        #div2 {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos para la tabla */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <!-- Contenido del div 1 -->
+        <div id="div2">
+            <h2>Información</h2>
+            <table>
+                <tr>
+                    <th>Nombre</th>
+                    <td>Juan Pérez</td>
+                </tr>
+                <tr>
+                    <th>Edad</th>
+                    <td>30 años</td>
+                </tr>
+                <!-- Agrega más filas según tus necesidades -->
+            </table>
+        </div>
+    </div>
+</body>
+</html>
