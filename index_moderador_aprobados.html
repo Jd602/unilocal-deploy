@@ -59,21 +59,26 @@
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <!--INGRESAR AQUÍ LOS CAMBIOS DEL DASHBOARD-->
-                <a class="nav-link" href="index_mod.html">
-                    <i class="far fa-plus-square"></i>
+                <a class="nav-link" href="index_moderador.html">
+                    <i class="far fa-plus-square" ></i>
                     <span>Solicitudes de negocios</span>
                 </a>
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="index_moderador_no_aprobados.html">
                     <i class="fas fa-exclamation-triangle"></i>
                     <span>Negocios no aprobados</span>
                 </a>
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="index_moderador_aprobados.html">
                     <i class="far fa-thumbs-up"></i>
                     <span>Negocios aprobados</span>
                 </a>
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="index_moderador_rechazados.html">
                     <i class="fas fa-times"></i>
                     <span>Negocios rechazados</span>
+                </a>
+                <hr class="sidebar-divider">
+                <a class="nav-link" href="forgot-password.html">
+                    <i class="fas fa-door-closed"></i>
+                    <span>Cambiar contraseña</span>
                 </a>
                 <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
                     <i class="fas fa-sign-out-alt"></i>
@@ -211,7 +216,7 @@
                         <div style="flex: 1;">
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Negocios que solicitan aprobación</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Negocios aprobados para Unilocal</h6>
                                 </div>
                                 <div class="card-body">
                                  <div class="table-responsive">
@@ -222,7 +227,7 @@
                                                     <th>Ciudad</th>
                                                     <th>Propietario</th>
                                                     <th>Tipo</th>
-                                                    <th>Estado</th>
+                                                    <th>Editar</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -231,28 +236,28 @@
                                                     <td>Pereira</td>
                                                     <td>Jorge Gómez</td>
                                                     <td>Bar</td>
-                                                    <td class="icon-circle bg-success" style="padding: 8px; text-align: center;"><i class="fas fa-check"></i></td>
+                                                    <td style="padding: 8px; text-align: center;"><i class="fas fa-pencil-alt"></i></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Camino del sabor</td>
                                                     <td>Medellín</td>
                                                     <td>Ana Pérez</td>
                                                     <td>Restaurante</td>
-                                                    <<td style="padding: 8px; text-align: center;"><i class="fas fa-flag-checkered"></i></td>
+                                                    <td style="padding: 8px; text-align: center;"><i class="fas fa-pencil-alt"></i></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Romance</td>
                                                     <td>Jon Blackwood</td>
                                                     <td>Bogotá</td>
                                                     <td>Adultos</td>
-                                                    <td style="padding: 8px; text-align: center;"><i class="fas fa-flag-checkered"></i></td>
+                                                    <td style="padding: 8px; text-align: center;"><i class="fas fa-pencil-alt"></i></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Green films</td>
                                                     <td>Medellín</td>
                                                     <td>Roberto Mendoza</td>
                                                     <td>Cine</td>
-                                                    <td style=" padding: 8px; text-align: center;"><i class="fas fa-flag-checkered"></i></td>
+                                                    <td style="padding: 8px; text-align: center;"><i class="fas fa-pencil-alt"></i></td>
                                                 </tr>
                                             </tbody>
                                         </table>

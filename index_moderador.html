@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Unilocal - No logging</title>
+    <title>Unilocal - Moderador</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -53,23 +53,36 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                CUENTA
+                MODERADOR
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <!--INGRESAR AQUÍ LOS CAMBIOS DEL DASHBOARD-->
-                <a class="nav-link" href="login.html">
-                    <i class="fas fa-map-marked-alt"></i>
-                    <span>Ingresar a mi cuenta</span>
+                <a class="nav-link" href="index_moderador.html">
+                    <i class="far fa-plus-square" ></i>
+                    <span>Solicitudes de negocios</span>
                 </a>
-                <a class="nav-link" href="register.html">
-                    <i class="fas fa-pencil-alt"></i>
-                    <span>Registrar cuenta</span>
+                <a class="nav-link" href="index_moderador_no_aprobados.html">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>Negocios no aprobados</span>
                 </a>
+                <a class="nav-link" href="index_moderador_aprobados.html">
+                    <i class="far fa-thumbs-up"></i>
+                    <span>Negocios aprobados</span>
+                </a>
+                <a class="nav-link" href="index_moderador_rechazados.html">
+                    <i class="fas fa-times"></i>
+                    <span>Negocios rechazados</span>
+                </a>
+                <hr class="sidebar-divider">
                 <a class="nav-link" href="forgot-password.html">
                     <i class="fas fa-door-closed"></i>
-                    <span>Recuperar contraseña</span>
+                    <span>Cambiar contraseña</span>
+                </a>
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Salir</span>
                 </a>
             </li>
             
@@ -160,16 +173,35 @@
                         </li>
 
                         <!-- Nav Item - User Information -->
-                        <!--SE DEJA LA ESTRUCTURA PARA HEREDAR EL CSS, ESTADOS EN FALSE-->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="login.html" 
-                                 aria-haspopup="false" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Iniciar sesión</span>
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Gasser (moderador)</span>
                                 <img class="img-profile rounded-circle"
-                                    src="img/user-solid.svg">
+                                    src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
-                            
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a>Este menú es temporal, en la versión final se elimina</a>
+                                <a class="dropdown-item" href="login.html">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Login
+                                </a>
+                                <a class="dropdown-item" href="cards.html">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Cards
+                                </a>
+                                <a class="dropdown-item" href="tables.html">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Tables
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Salir
+                                </a>
+                            </div>
                         </li>
 
                     </ul>
@@ -179,41 +211,67 @@
 
                 <!-- AQUÍ VA EL CONTENIDO PROPIO DE LA PÁGINA -->
                 <div class="container-fluid">
-
-                    <div id="div-principal" >
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15768.283021607443!2d-75.69180952431152!3d4.534578143133677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e409f17999b16b3%3A0x6443fb83549a3b15!2sArmenia%2C%20Quind%C3%ADo%2C%20Colombia!5e0!3m2!1sen!2sus!4v1646487382157!5m2!1sen!2sus" width="1200" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                        <!--AQUÍ SE AGREGA EL CARD-->
-                    <div class="card " style="width: 20vw; height:15vw; opacity:0.75;position:absolute; bottom: 100px;; right:0;">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Negocios recomendados</h6>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive"  style="height:100%">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>Negocio</th>
-                                            <th>Distancia</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Hotel Mocawa</td>
-                                            <td>1 km</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Bar Igneos</td>
-                                            <td>2 km</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Spa Luxury</td>
-                                            <td>2 km</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                    <!--INICIO-->
+                    <div style="display: flex;">
+                        <div style="flex: 1;">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Negocios que solicitan aprobación</h6>
+                                </div>
+                                <div class="card-body">
+                                 <div class="table-responsive">
+                                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                            <thead>
+                                                <tr>
+                                                    <th>Negocio</th>
+                                                    <th>Ciudad</th>
+                                                    <th>Propietario</th>
+                                                    <th>Tipo</th>
+                                                    <th>Editar</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Bar Blue</td>
+                                                    <td>Pereira</td>
+                                                    <td>Jorge Gómez</td>
+                                                    <td>Bar</td>
+                                                    <td style="padding: 8px; text-align: center;"><i class="fas fa-pencil-alt"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Camino del sabor</td>
+                                                    <td>Medellín</td>
+                                                    <td>Ana Pérez</td>
+                                                    <td>Restaurante</td>
+                                                    <td style="padding: 8px; text-align: center;"><i class="fas fa-pencil-alt"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Romance</td>
+                                                    <td>Jon Blackwood</td>
+                                                    <td>Bogotá</td>
+                                                    <td>Adultos</td>
+                                                    <td style="padding: 8px; text-align: center;"><i class="fas fa-pencil-alt"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Green films</td>
+                                                    <td>Medellín</td>
+                                                    <td>Roberto Mendoza</td>
+                                                    <td>Cine</td>
+                                                    <td style="padding: 8px; text-align: center;"><i class="fas fa-pencil-alt"></i></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
-                        <!--AQUÍ TERMINA EL CARD-->
+                        </div>
+                        <div style="flex: 1;">
+                            <!-- Puedes usar un iframe para mostrar un mapa de Google Maps, por ejemplo -->
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15768.283021607443!2d-75.69180952431152!3d4.534578143133677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e409f17999b16b3%3A0x6443fb83549a3b15!2sArmenia%2C%20Quind%C3%ADo%2C%20Colombia!5e0!3m2!1sen!2sus!4v1646487382157!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+
                     </div>
+                    <!--FIN-->
                 </div>
                 <!-- /.container-fluid -->
 
@@ -305,11 +363,30 @@
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Unilocal es es una plataforma que incentiva el comercio y la gastronomía regional, donde se busca apoyar a los pequeños comerciantes.<br><br>
-                Desarrollada por Juan David Saraza, Gasser Abdeslam Abdelgelil & Santiago Marín.</div>
+                <div class="modal-body">Unilocal es es una plataforma que incentiva el comercio y la gastronomía regional, donde se busca apoyar a los pequeños comerciantes<br>
+                Desarrollada por Juan David Saraza, Gasser Abdeslam Abdelgelil & Santiago Marín</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">OK</button>
-                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Respuesta Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">¿Cerrar sesión?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">¿Deseas cerrar sesión y no consultar más en este momento?</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Rechazar</button>
+                    <a class="btn btn-primary" href="#">Aprobar</a>
                 </div>
             </div>
         </div>
